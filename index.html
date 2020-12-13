@@ -8,14 +8,15 @@
     <script>
 
     function addAttendee() {
-        var attFullName =window.prompt("What is your name");
+        var attFullName =document.getElementById("attFullName").value;
         var body = document.getElementById("attendeesTableBody");
         var row = document.createElement("tr");
         var cell = document.createElement("td");
         cell.innerHTML=attFullName;
         body.appendChild(row);
         row.appendChild(cell);
-
+        //reset the field
+        document.getElementById("attFullName").value ="";
         }
 
     </script>
@@ -27,7 +28,7 @@
             <label>File Name:</label>
             <input type="text" name="attFullName" id="attFullName" />
         </div>
-        <div><input type="button" value="Register" />
+        <div><input type="button" value="Register" onclick="addAttendee();"/>
         </div>
     </form>
 
@@ -40,15 +41,7 @@
         </tbody>
 
     </table>
-    <script>
-  
-        addAttendee();
-        addAttendee();
-        addAttendee();
-        addAttendee();
-        addAttendee();
 
-    </script>
 </body>
 
 </html>
