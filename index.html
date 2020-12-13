@@ -5,6 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservation Demo</title>
+    <script>
+
+    function addAttendee() {
+        var attFullName =window.prompt("What is your name");
+        var body = document.getElementById("attendeesTableBody");
+        var row = document.createElement("tr");
+        var cell = document.createElement("td");
+        cell.innerHTML=attFullName;
+        body.appendChild(row);
+        row.appendChild(cell);
+
+        }
+
+    </script>
 </head>
 
 <body>
@@ -27,13 +41,12 @@
 
     </table>
     <script>
-        var attFullName =window.prompt("What is your name");
-        var body = document.getElementById("attendeesTableBody");
-        var row = document.createElement("tr");
-        var cell = document.createElement("td");
-        cell.innerHTML=attFullName;
-        body.appendChild(row);
-        row.appendChild(cell);
+  
+        addAttendee();
+        addAttendee();
+        addAttendee();
+        addAttendee();
+        addAttendee();
 
     </script>
 </body>
